@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+    font-family: "Montserrat", "sans-serif";
+}
+
+/*-------------------------Header----------------------- */ 
+.navbar {
+    padding: .5rem;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-collapse {
+    padding: .5rem;
+}
+
+.navbar-light .navbar-nav .nav-item .active {
+    font-weight: 600;    
+}
