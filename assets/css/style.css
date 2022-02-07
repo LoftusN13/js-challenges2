@@ -42,3 +42,30 @@ body {
     color: #811818;
     font-weight: 600;
 }
+
+/*-------------------------Checkboxes----------------------- */ 
+.inbox {
+    padding: .5rem;
+    max-width: 25rem;
+    margin: 3rem auto;
+    border-radius: .4rem;
+    border: #811818 solid .2rem;
+    box-shadow: .5rem .5rem 0 rgba(0,0,0,0.1);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: #F1F1F1 solid .06rem;
+}
+
+input[type="checkbox"] {
+    margin: 1.25rem;
+}
+
+p {
+    margin: 0;
+    padding: 1.25rem;
+    flex: 1;
+    border-left: #D1E2FF solid .06rem;
+}
