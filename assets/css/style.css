@@ -22,7 +22,9 @@ body {
 }
 
 .navbar-collapse {
-    justify-content: center;
+    justify-content: left;
+    padding-left: 1rem;
+    font-size: 1.2rem;
 }
 
 .navbar a {
@@ -44,6 +46,15 @@ body {
 }
 
 /*-------------------------Checkboxes----------------------- */ 
+.about {
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 1rem;
+    padding-bottom: .5rem;
+}
+
 .inbox {
     padding: .5rem;
     max-width: 25rem;
