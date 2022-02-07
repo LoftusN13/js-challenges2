@@ -69,3 +69,8 @@ p {
     flex: 1;
     border-left: #D1E2FF solid .06rem;
 }
+
+input:checked + p {
+    background: #F9F9F9;
+    text-decoration: line-through;
+}
