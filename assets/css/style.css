@@ -5,18 +5,40 @@ body {
 }
 
 /*-------------------------Header----------------------- */ 
-.navbar {
-    padding: .5rem;
+.site-logo {
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #811818;
 }
 
-.navbar-toggler {
-    border: none;
+.site-logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-logo i {
+    padding: 0.3rem;
 }
 
 .navbar-collapse {
-    padding: .5rem;
+    justify-content: center;
 }
 
-.navbar-light .navbar-nav .nav-item .active {
-    font-weight: 600;    
+.navbar a {
+    color: #811818;
+}
+.navbar a:hover {
+    color: #811818;
+    font-weight: 600;
+}
+
+.navbar .nav-item .active {
+    font-weight: 600;
+    color: #003049;
+}
+
+.nav-link:focus {
+    color: #811818;
+    font-weight: 600;
 }
