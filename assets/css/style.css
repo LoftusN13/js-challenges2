@@ -87,3 +87,9 @@ input:checked + p {
 }
 
 /*-------------------------Video Player----------------------- */ 
+.player {
+    text-align: center;
+}
+.video_player {
+    width: 110vh;
+}
