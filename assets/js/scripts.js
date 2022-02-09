@@ -27,3 +27,14 @@ function handleCheck(e) {
 }
 
 checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+
+// Video Player Challenge
+const player = document.querySelector('.player');
+const video = player.querySelector('.viewer');
+
+const progress = player.querySelector('.progress-bar');
+const progressBar = player.querySelector('.progress-filled');
+
+const toggle = player.querySelector('.toggle');
+const skipButtons = player.querySelectorAll('[data-skip]');
+const ranges = player.querySelectorAll('.video-slider');
