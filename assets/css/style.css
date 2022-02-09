@@ -90,6 +90,6 @@ input:checked + p {
 .player {
     text-align: center;
 }
-.video_player {
+.video-player {
     width: 110vh;
 }
