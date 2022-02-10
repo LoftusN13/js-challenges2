@@ -43,8 +43,11 @@ const ranges = player.querySelectorAll('.video-slider');
 function togglePlay() {
     if(video.paused) {
         video.play();
+        document.getElementById('icon').innerHTML = '<i class="fas fa-pause"></i>';
+
     } else {
         video.pause();
+        document.getElementById('icon').innerHTML = '<i class="fas fa-play"></i>';
     }
 }
 
