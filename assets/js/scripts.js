@@ -51,5 +51,11 @@ function togglePlay() {
     }
 }
 
+function skip() {
+    video.currentTime += parseFloat(this.dataset.skip);
+}
+
 toggle.addEventListener('click', togglePlay);
 video.addEventListener('click', togglePlay);
+
+skipButtons.forEach(button => button.addEventListener('click', skip));
