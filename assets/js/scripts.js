@@ -49,3 +49,4 @@ function togglePlay() {
 }
 
 toggle.addEventListener('click', togglePlay);
+video.addEventListener('click', togglePlay);
