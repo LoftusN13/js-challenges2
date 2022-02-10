@@ -38,3 +38,14 @@ const progressBar = player.querySelector('.progress-filled');
 const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.video-slider');
+
+//allows video to be played and paused
+function togglePlay() {
+    if(video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
+
+toggle.addEventListener('click', togglePlay);
