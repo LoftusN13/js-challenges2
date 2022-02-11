@@ -113,18 +113,6 @@ input:checked + p {
     color: #FCBF49;
 }
 
-.player:hover .video-controls {
-    transform: translateY(0);
-}
-
-.player:hover .progress-bar {
-    height: .7rem;
-}
-  
-.video-controls > * {
-    flex: 1;
-}
-
 .video-controls {
     display: flex;
     position: absolute;
@@ -137,8 +125,22 @@ input:checked + p {
     font-size: .7rem;
 }
 
+.player:hover .video-controls {
+    transform: translateY(0);
+}
+
+.player:hover .progress-bar {
+    height: .7rem;
+}
+  
+.video-controls > * {
+    flex: 1;
+}
+
 .progress-bar {
     flex: 10;
+    flex-direction: row;
+    justify-content: start;
     position: relative;
     display: flex;
     flex-basis: 100%;
@@ -149,8 +151,6 @@ input:checked + p {
 }
   
 .progress-filled {
-    width: 50%;
     background: #FCBF49;
-    flex: 10;
-    flex-basis: 50%;
+    flex: 0;
 }

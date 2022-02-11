@@ -51,16 +51,26 @@ function togglePlay() {
     }
 }
 
+//allows video to be skipped forward and backward
 function skip() {
     video.currentTime += parseFloat(this.dataset.skip);
 }
 
+//allows video playback speed to be changed
 function handleRangeUpdate() {
     video[this.name] = this.value;
 }
 
+//fills progress bar accurately while video plays
+function handleProgress() {
+    const percent = (video.currentTime / video.duration) * 100;
+    progressBar.style.flexBasis = `${percent}%`;
+}
+ 
 toggle.addEventListener('click', togglePlay);
+
 video.addEventListener('click', togglePlay);
+video.addEventListener('timeupdate', handleProgress);
 
 skipButtons.forEach(button => button.addEventListener('click', skip));
 
