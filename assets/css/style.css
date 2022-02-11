@@ -122,7 +122,7 @@ input:checked + p {
     transition: all .3s;
     flex-wrap: wrap;
     background: rgba(0,0,0,0.1);
-    font-size: .7rem;
+    font-size: .9rem;
 }
 
 .player:hover .video-controls {
