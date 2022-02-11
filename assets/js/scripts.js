@@ -116,3 +116,16 @@ progress.addEventListener('mouseup', () => mousedown = false);
 fullscreen.addEventListener('click', openFullscreen);
 fullscreen.addEventListener('click', closeFullscreen);
 fullscreen.addEventListener('click', toggleFullscreen);
+
+
+// Key Sequence Detection Challenge 
+const pressed = [];
+const secretCode = 'huzzah';
+
+document.addEventListener('keyup', (e) => {
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length -1, pressed.length - secretCode.length);
+    if (pressed.join('').includes(secretCode)) {
+        document.getElementById('secret-message').innerHTML = '<h2>You found the secret code!</h2>';
+    }
+});

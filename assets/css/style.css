@@ -154,3 +154,10 @@ input:checked + p {
     background: #FCBF49;
     flex: 0;
 }
+
+/*-----------------------Key Sequence Detection Challenge --------------------- */ 
+#secret-message h2 {
+    text-align: center;
+    padding-top: 2rem;
+    color: #811818;
+}
