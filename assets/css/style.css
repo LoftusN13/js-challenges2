@@ -74,7 +74,7 @@ input[type="checkbox"] {
     margin: 1.25rem;
 }
 
-p {
+.item p {
     margin: 0;
     padding: 1.25rem;
     flex: 1;
@@ -160,4 +160,21 @@ input:checked + p {
     text-align: center;
     padding-top: 2rem;
     color: #811818;
+}
+
+/*-----------------------Slide on Scroll Challenge --------------------- */ 
+.scroll-section {
+    text-align: center;
+    max-width: 50rem;
+    padding: 1rem;
+    margin: 3rem auto;
+  }
+
+.scroll-section h1 {
+    text-align: center;
+}
+
+.scroll-section img {
+    max-width: 15rem;
+    padding: 1rem;
 }
