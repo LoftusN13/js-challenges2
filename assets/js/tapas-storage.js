@@ -1,7 +1,7 @@
 // Tapas Local Storage Challenge 
 const addDishes = document.querySelector('.add-tapas');
 const tapasList = document.querySelector('.dishes');
-const dishes = [];
+const dishes = JSON.parse(localStorage.getItem('dishes')) || [];
 
 function addDish(e) {
     e.preventDefault();
@@ -13,6 +13,7 @@ function addDish(e) {
 
     dishes.push(dish);
     populateList(dishes, tapasList);
+    localStorage.setItem('dishes', JSON.stringify(dishes));
     this.reset();
 };
 
@@ -28,3 +29,5 @@ function populateList(dishes = [], dishesList) {
 }
 
 addDishes.addEventListener('submit', addDish);
+
+populateList(dishes, tapasList);
