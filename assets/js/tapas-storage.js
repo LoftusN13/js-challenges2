@@ -12,8 +12,19 @@ function addDish(e) {
     };
 
     dishes.push(dish);
+    populateList(dishes, tapasList);
     this.reset();
 };
 
+function populateList(dishes = [], dishesList) {
+    dishesList.innerHTML = dishes.map((dish, i) => {
+        return `
+            <li>
+            <input type="checkbox" data-index=${i} id="dish${i}" ${dish.done ? 'checked' : ''}/>
+            <label for "dish${i}">${dish.text}</label>
+            </li>
+        `;
+    }).join('');
+}
 
 addDishes.addEventListener('submit', addDish);
