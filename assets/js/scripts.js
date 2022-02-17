@@ -129,3 +129,28 @@ document.addEventListener('keyup', (e) => {
         document.getElementById('secret-message').innerHTML = '<h2>You found the secret code!</h2>';
     }
 });
+
+// Slide In On Scroll Challenge
+const slideImages = document.querySelectorAll('.slide-in');
+
+//prevent scroll function running too many times causing lag
+function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+};
+
+function checkSlide(e) {
+    console.log('hello');
+}
+
+window.addEventListener('scroll', checkSlide);
