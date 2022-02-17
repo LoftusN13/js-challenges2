@@ -165,7 +165,7 @@ input:checked + p {
 /*-----------------------Slide on Scroll Challenge --------------------- */ 
 .scroll-section { 
     max-width: 50rem;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     margin: 1rem auto;
   }
 
@@ -189,4 +189,17 @@ input:checked + p {
 .slide-in {
     opacity: 0;
     transition: all .5s;
+}
+
+.align-left.slide-in {
+    transform: translateX(-30%) scale(0.95);
+}
+  
+.align-right.slide-in {
+    transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
 }
