@@ -22,12 +22,22 @@ function populateList(dishes = [], dishesList) {
         return `
             <li>
             <input type="checkbox" data-index=${i} id="dish${i}" ${dish.done ? 'checked' : ''}/>
-            <label for "dish${i}">${dish.text}</label>
+            <label for="dish${i}">${dish.text}</label>
             </li>
         `;
     }).join('');
 }
 
+function toggleDone(e) {
+    if (!e.target.matches('input')) return; // skip this unless it's an input
+    const el = e.target;
+    const index = el.dataset.index;
+    dishes[index].done = !dishes[index].done;
+    localStorage.setItem('dishes', JSON.stringify(dishes));
+    populateList(dishes, tapasList);
+}
+
 addDishes.addEventListener('submit', addDish);
+tapasList.addEventListener('click', toggleDone);
 
 populateList(dishes, tapasList);
