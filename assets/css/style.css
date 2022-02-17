@@ -163,11 +163,10 @@ input:checked + p {
 }
 
 /*-----------------------Slide on Scroll Challenge --------------------- */ 
-.scroll-section {
-    
+.scroll-section { 
     max-width: 50rem;
-    padding: 1.5rem;
-    margin: 3rem auto;
+    padding: 2rem 3rem;
+    margin: 1rem auto;
   }
 
 .scroll-section h1 {
