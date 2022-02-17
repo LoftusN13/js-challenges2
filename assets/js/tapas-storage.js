@@ -5,7 +5,15 @@ const dishes = [];
 
 function addDish(e) {
     e.preventDefault();
-    console.log('hey');
-}
+    const text = (this.querySelector('[name=tapas]')).value;
+    const dish = {
+        text: text,
+        done: false
+    };
+
+    dishes.push(dish);
+    this.reset();
+};
+
 
 addDishes.addEventListener('submit', addDish);
