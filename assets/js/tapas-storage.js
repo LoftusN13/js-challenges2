@@ -21,7 +21,7 @@ function populateList(dishes = [], dishesList) {
     dishesList.innerHTML = dishes.map((dish, i) => {
         return `
             <li>
-            <input type="checkbox" data-index=${i} id="dish${i}" ${dish.done ? 'checked' : ''}/>
+            <input type="checkbox" name="chk" data-index=${i} id="dish${i}" ${dish.done ? 'checked' : ''}/>
             <label for="dish${i}">${dish.text}</label>
             </li>
         `;
@@ -37,7 +37,41 @@ function toggleDone(e) {
     populateList(dishes, tapasList);
 }
 
+const checkButton = document.querySelector('.check-btn');
+const uncheckButton = document.querySelector('.uncheck-btn');
+const clearListButton = document.querySelector('.clear-btn');
+
+function checkAll() {
+    let ele = document.getElementsByName('chk');
+
+    for(let i=0; i<ele.length; i++) {  
+        if(ele[i].type == 'checkbox') { 
+            ele[i].checked = true; 
+        };
+    };
+}
+
+function uncheckAll() {
+    let ele = document.getElementsByName('chk');
+
+    for(let i=0; i<ele.length; i++) {  
+        if(ele[i].type == 'checkbox') { 
+            ele[i].checked = false; 
+        };
+    };
+}
+
+function clearList() {
+    let list = document.getElementById("list");
+    [...list.children].forEach(c => list.removeChild(c));
+    localStorage.clear();
+}
+
 addDishes.addEventListener('submit', addDish);
 tapasList.addEventListener('click', toggleDone);
 
 populateList(dishes, tapasList);
+
+checkButton.addEventListener('click', checkAll);
+uncheckButton.addEventListener('click', uncheckAll);
+clearListButton.addEventListener('click', clearList);
