@@ -229,6 +229,7 @@ input:checked + p {
     max-width: 25rem;
     background: rgba(255, 255, 255, 0.97);
     box-shadow: 0 0 0 .5rem rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .tapas-form h2 {
@@ -282,4 +283,11 @@ input:checked + p {
     border: .07rem solid rgba(0, 0, 0, 0.2);
     border-radius: .1rem;
     box-shadow: 0 0 0 .05rem rgba(0, 0, 0, 0.1);
+}
+
+.check-btn,
+.uncheck-btn,
+.clear-btn {
+    margin: 1rem .1rem 0 .1rem;
+    font-size: .6rem;
 }
