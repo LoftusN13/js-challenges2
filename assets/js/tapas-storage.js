@@ -62,9 +62,9 @@ function uncheckAll() {
 }
 
 function clearList() {
-    let list = document.getElementById("list");
-    [...list.children].forEach(c => list.removeChild(c));
     localStorage.clear();
+    location.reload();
+    return false;
 }
 
 addDishes.addEventListener('submit', addDish);
